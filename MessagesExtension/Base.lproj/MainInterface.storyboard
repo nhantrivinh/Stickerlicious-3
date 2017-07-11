@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Messages View Controller-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
@@ -17,16 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzF-hB-Kl3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
+                                <connections>
+                                    <segue destination="1bv-OJ-HRP" kind="embed" id="TGt-1O-nmW"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ow-h3-cAF">
+                                <rect key="frame" x="0.0" y="498" width="320" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EfH-3x-PfV"/>
+                                </constraints>
+                                <state key="normal" title="STICKERS STORE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xyl-aB-eku" kind="presentation" id="3SQ-pM-xXL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="d1e-fi-ked" secondAttribute="centerY" id="H0s-hz-dDP"/>
-                            <constraint firstAttribute="centerX" secondItem="d1e-fi-ked" secondAttribute="centerX" id="wFy-hW-Bib"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="4ow-h3-cAF" secondAttribute="bottom" id="5fi-2i-1iJ"/>
+                            <constraint firstItem="4ow-h3-cAF" firstAttribute="top" secondItem="HzF-hB-Kl3" secondAttribute="bottom" id="IrK-i8-YiA"/>
+                            <constraint firstItem="HzF-hB-Kl3" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="Pfh-AN-Luc"/>
+                            <constraint firstItem="4ow-h3-cAF" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="TbB-7h-3hq"/>
+                            <constraint firstItem="HzF-hB-Kl3" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="adl-Kw-dAf"/>
+                            <constraint firstAttribute="trailing" secondItem="HzF-hB-Kl3" secondAttribute="trailing" id="tJx-hE-KMy"/>
+                            <constraint firstAttribute="trailing" secondItem="4ow-h3-cAF" secondAttribute="trailing" id="wCC-qd-yjx"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -34,6 +57,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136" y="-71.064467766116948"/>
+        </scene>
+        <!--Candy Browser View Controller-->
+        <scene sceneID="h9G-hI-FBA">
+            <objects>
+                <viewController id="1bv-OJ-HRP" customClass="CandyBrowserViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cAc-Hj-SBf"/>
+                        <viewControllerLayoutGuide type="bottom" id="NP9-I1-kSD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9cQ-4e-Quv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X54-dX-95n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="-71"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="YlO-i9-DLq">
+            <objects>
+                <viewController id="xyl-aB-eku" customClass="StoreViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vR3-h2-X0A"/>
+                        <viewControllerLayoutGuide type="bottom" id="NN9-X6-3bg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ni2-Tx-H4m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOp-vO-F4y">
+                                <rect key="frame" x="0.0" y="498" width="320" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cfb-PQ-1ck"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonDidTouch:" destination="xyl-aB-eku" eventType="touchUpInside" id="CEQ-6V-4Bc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HOp-vO-F4y" secondAttribute="trailing" id="0fj-ef-xPC"/>
+                            <constraint firstItem="HOp-vO-F4y" firstAttribute="leading" secondItem="Ni2-Tx-H4m" secondAttribute="leading" id="RIF-yY-0Sd"/>
+                            <constraint firstItem="NN9-X6-3bg" firstAttribute="top" secondItem="HOp-vO-F4y" secondAttribute="bottom" id="fo4-7d-a0N"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlb-lK-kI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793.60000000000002" y="487.55622188905551"/>
         </scene>
     </scenes>
 </document>
