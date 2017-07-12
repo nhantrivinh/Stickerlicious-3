@@ -94,7 +94,6 @@
 		634CCF931F11E90C004D9FBD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634CCF911F11E90C004D9FBD /* MainInterface.storyboard */; };
 		634CCF951F11E90C004D9FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634CCF941F11E90C004D9FBD /* Assets.xcassets */; };
 		634CCFB41F11EA1E004D9FBD /* CandyBrowserStickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CCFB31F11EA1E004D9FBD /* CandyBrowserStickerViewController.swift */; };
-		63D274ED1F1523F300529586 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D274EC1F1523F300529586 /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,7 +211,6 @@
 		634CCF941F11E90C004D9FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634CCF961F11E90C004D9FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634CCFB31F11EA1E004D9FBD /* CandyBrowserStickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyBrowserStickerViewController.swift; sourceTree = "<group>"; };
-		63D274EC1F1523F300529586 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,7 +346,6 @@
 				63441B031F1366E500C5C247 /* in app purchase 3 */,
 				634CCF8F1F11E90C004D9FBD /* MessagesViewController.swift */,
 				634CCFB31F11EA1E004D9FBD /* CandyBrowserStickerViewController.swift */,
-				63D274EC1F1523F300529586 /* StoreViewController.swift */,
 				634CCF911F11E90C004D9FBD /* MainInterface.storyboard */,
 				634CCF941F11E90C004D9FBD /* Assets.xcassets */,
 				634CCF961F11E90C004D9FBD /* Info.plist */,
@@ -574,7 +571,6 @@
 			files = (
 				634CCF901F11E90C004D9FBD /* MessagesViewController.swift in Sources */,
 				634CCFB41F11EA1E004D9FBD /* CandyBrowserStickerViewController.swift in Sources */,
-				63D274ED1F1523F300529586 /* StoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
